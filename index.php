@@ -122,9 +122,9 @@
 
     <div class="container mt-4 mb-4" style="">
     	<h2 class="text-center mb-3">Berita & Artikel</h2>
-      <div class="row animatedParent animateOnce">
+      <div class="row">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="col-lg-3 m-0 p-2 animated bounceInUp">
+        <div class="col-lg-3 m-0 p-2">
           <div class="card shadow border-0 rounded-lg">
             <div style="max-height:200px;overflow: hidden;">
               <img src="<?php echo get_template_directory_uri(); ?>/images/imagenotfound.png" class="card-img-top" alt="...">
