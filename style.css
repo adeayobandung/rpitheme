@@ -27,6 +27,10 @@ body {
     padding: 0;
 }
 
+article {
+    font-family: 'Noto Serif', 'Roboto', sans-serif;
+}
+
 /* navbar */
 .nav-link {
     font-family: 'Roboto Condensed', sans-serif;
