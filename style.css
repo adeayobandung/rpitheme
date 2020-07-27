@@ -1,0 +1,182 @@
+/*
+Theme Name: RPI Theme
+Theme URI: https://rpi.or.id/themes/rpitheme/
+Author: Ade Indra Saputra
+Author URI: https://rozaka.com/
+Description: This is template for Rumah Produktif Indonesia.
+Requires at least: 4.9
+Requires PHP: 7.2
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: riptheme
+Tags: rpitheme, rpi, rumah, produktif, indonesia
+*/
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
+/* 
+Vendor : Bootstrap v4
+CSS Created : by Ade Indra Saputra
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 65px 0 0 0;
+    padding: 0;
+}
+
+/* navbar */
+.nav-link {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* carousel */
+.carousel-control-next,
+.carousel-control-prev {
+    height: 50px;
+    width: 50px;
+    padding: 12px;
+    top: 45%;
+    bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: translateY(-45%);
+    /* background-color: #f47735; */
+    background-color: #FFF;
+
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('images/arrow-left-solid.svg') !important;
+    color: blue;
+}
+
+.carousel-control-next-icon {
+    background-image: url('images/arrow-right-solid.svg') !important;
+}
+
+ol.carousel-indicators li {
+    width: 15px !important;
+    height: 15px !important;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+ol.carousel-indicators li.active {
+    background-color: #4562A0 !important;
+
+}
+
+.carousel-item-img {
+    width: 100%;
+    height: 207px;
+}
+
+.carousel-item-img img {
+    width: 100%;
+}
+
+/* content slice */
+.content-slice-president {
+    background-color: #20434E;
+    overflow: hidden;
+    min-height: 275px;
+}
+
+.content-slice {
+    background-color: #E8E8E8;
+    height: 275px;
+    overflow: hidden;
+}
+.content-slice-president h2,
+.content-slice h2 {
+    color: #20434E;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content-slice-president img,
+.content-slice img {
+    width: 255px;
+}
+
+.content-slice-item {
+    padding: 20px 30px;
+    /* border: 1px solid #000; */
+    min-height: 275px;
+}
+
+/* title */
+.title-service {
+    color: #0081AF;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* panel product */
+.panel-product {
+    border-radius: 10px;
+    padding: 30px 15px;
+    min-height: 447px;
+    overflow: hidden;
+}
+
+.panel-product h2 {
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.panel-product p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px;
+}
+
+.panel-product-img {
+    height: 211px;
+}
+
+/* footer */
+footer {
+    height: 50px;
+    background-color: #183640;
+    overflow: hidden;
+    padding: 14px 0;
+}
+
+footer p {
+
+    color: #FFF;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .carousel-item-img {
+        width: 100%;
+        height: 372px;
+    }
+
+
+    .content-slice-item {
+        padding: 70px 60px;
+    }
+}
+
+.card-body .excerpt p {
+    font-size: 0.9em;
+}
