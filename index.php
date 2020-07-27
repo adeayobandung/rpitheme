@@ -101,10 +101,10 @@
           <div class="row">
             <div class="col-lg-8">
               <h2 class="pt-3 animated bounceInLeft" style="color:#FFC107;">Message from The President</h2>
-              <p class="text-white animated bounceInDown">Sejak Indonesia merdeka, pembicaraan tentang manusia Indonesia umumnya berkisar terkait "manusia merdeka", "manusia berkarakter", "manusia berkebudayaan", dlsb. Masih kurang dibicarakan dan mewujud dalam gerakan untuk menciptakan manusia Indonesia yang produktif dalam berbagai bidang yang diminati. Pada 18 Maret 2020, hari ke-16 setelah Presiden Joko Widodo...
+              <p class="text-white animated bounceInDown">Rumah Produktif Indonesia lahir minggu kedua pandemi covid-19 melanda negeri kita tercinta. Awalnya, wadah ini sekedar tempat diskusi dan saling menguatkan, akan tetapi seiring dengan perkembangan dirasakan penting untuk menjadikan inisiatif ini menjadi komunitas besar dengan struktur dan kegiatan yang terukur.
                 
               </p>
-              <a href="#" class="btn btn-success btn-lg">SELENGKAPNYA</a>
+              <a href="https://rpi.or.id/index.php/message-from-president-rpi/" class="btn btn-success btn-lg">SELENGKAPNYA</a>
             </div>
             <div class="col-lg-4">
               <img src="<?php echo get_template_directory_uri(); ?>/images/president.png" class="rounded-circle float-right shadow" width="100" alt="">
