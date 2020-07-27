@@ -55,7 +55,7 @@
             <div class="col-lg-8">
 
               <h2 class="pt-3 animated bounceInDown">Siapa Kami?</h2>
-              <p class="animated bounceInLeft">Rumah Produktif Indonesia adalah wadah berkumpulnya manusia Indonesia dari berbagai latar belakang untuk berkolaborasi dalam berbagai aktivitas positif dan produktif yang berdampak pada pengembangan diri, komunitas, dan bangsa Indonesia.</p>
+              <p class="animated bounceInDown">Rumah Produktif Indonesia adalah wadah berkumpulnya manusia Indonesia dari berbagai latar belakang untuk berkolaborasi dalam berbagai aktivitas positif dan produktif yang berdampak pada pengembangan diri, komunitas, dan bangsa Indonesia.</p>
 
             </div>
             <div class="col-lg-4">
@@ -71,8 +71,8 @@
     <div class="container animatedParent animateOnce" style="overflow:hidden;min-height:360px;">
       <div class="row justify-content-md-center">
         <div class="col-lg-6">
-          <h2 class="pt-3 title-service animated bounceInLeft" style="color:#20434E;">Visi</h2>
-          <p class="animated bounceInLeft">Menciptakan Manusia Indonesia yang produktif dalam berbagai bidang berbasis pada masyarakat berjejaring.</p>
+          <h2 class="pt-3 title-service animated bounceInDown" style="color:#20434E;">Visi</h2>
+          <p class="animated bounceInDown">Menciptakan Manusia Indonesia yang produktif dalam berbagai bidang berbasis pada masyarakat berjejaring.</p>
         </div>
         <div class="col-lg-4">
           <img src="<?php echo get_template_directory_uri(); ?>/images/Visi-Icon.gif" class="animated bounceInDown" width="250" alt="">
@@ -100,7 +100,7 @@
         <div class="content-slice-item">
           <div class="row">
             <div class="col-lg-8">
-              <h2 class="pt-3 animated bounceInLeft" style="color:#FFC107;">Message from The President</h2>
+              <h2 class="pt-3 animated bounceInDown" style="color:#FFC107;">Message from The President</h2>
               <p class="text-white animated bounceInDown">Rumah Produktif Indonesia lahir minggu kedua pandemi covid-19 melanda negeri kita tercinta. Awalnya, wadah ini sekedar tempat diskusi dan saling menguatkan, akan tetapi seiring dengan perkembangan dirasakan penting untuk menjadikan inisiatif ini menjadi komunitas besar dengan struktur dan kegiatan yang terukur.
                 
               </p>
