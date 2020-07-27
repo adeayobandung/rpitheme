@@ -125,20 +125,20 @@
       <div class="row">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="col-lg-3 m-0 p-2">
-          <div class="card shadow border-0 rounded-lg">
+          <div class="card shadow border-0 rounded-lg" style="min-height: 390px;">
             <div style="max-height:200px;overflow: hidden;">
               <img src="<?php echo get_template_directory_uri(); ?>/images/imagenotfound.png" class="card-img-top" alt="...">
             </div>
           
-          <div class="card-body">
-            <h5 class="card-title mb-0 pb-0" style="font-size: 1.2em;" title="<?php the_title_attribute(); 
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title mb-0 pb-0" style="font-size: 1.1em;" title="<?php the_title_attribute(); 
 ?>"><?php the_title(); ?></h5>
             <p class="m-0 p-0" style="font-size:0.7em;color:#ACACAC;"><?php the_author(); ?> | <?php the_date(); ?></p>
             <hr class="mb-2 mt-0 p-0">
             <div class="excerpt">
               <?php the_excerpt(); ?>
             </div>
-            <a href="<?php the_permalink(); ?>" class="btn btn-info btn-sm">SELENGKAPNYA</a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-info btn-sm mt-auto">SELENGKAPNYA</a>
           </div>
         </div>
         </div>

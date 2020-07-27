@@ -2,23 +2,7 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="<?php bloginfo('charset'); ?>" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://www.rozaka.com/" rel="canonical" />
-
-  <meta content="Rumah Produktif Indonesia adalah wadah berkumpulnya manusia Indonesia dari berbagai latar belakang untuk berkolaborasi dalam berbagai aktivitas positif dan produktif yang berdampak pada pengembangan diri, komunitas, dan bangsa Indonesia." name="description" />
-  <meta content="Bergembira, Belajar, Berkawan" name="keywords" />
-  <meta content="RPI" itemprop="name" />
-  <meta content="Rumah Produktif Indonesia adalah wadah berkumpulnya manusia Indonesia dari berbagai latar belakang untuk berkolaborasi dalam berbagai aktivitas positif dan produktif yang berdampak pada pengembangan diri, komunitas, dan bangsa Indonesia." itemprop="description" />
-  <meta content="images/logo-long.png" itemprop="image" />
-  <meta content="Rumah Produktif Indonesia" name="twitter:title" />
-  <meta content="Rumah Produktif Indonesia adalah wadah berkumpulnya manusia Indonesia dari berbagai latar belakang untuk berkolaborasi dalam berbagai aktivitas positif dan produktif yang berdampak pada pengembangan diri, komunitas, dan bangsa Indonesia." name="twitter:description" />
-  <meta content="images/logo-rpi.png" name="twitter:image:src" />
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="Rumah Produktif Indonesia" property="og:title" />
-  <meta content="images/logo-rpi.png" property="og:image" />
-  <meta content="Rumah Produktif Indonesia adalah wadah berkumpulnya manusia Indonesia dari berbagai latar belakang untuk berkolaborasi dalam berbagai aktivitas positif dan produktif yang berdampak pada pengembangan diri, komunitas, dan bangsa Indonesia." property="og:description" />
+  <?php get_template_part( 'template-parts/meta'); ?>
 
   <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/icon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/icon/apple-icon-60x60.png">
@@ -46,7 +30,7 @@
 
   <?php wp_head(); ?>
 
-  <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+  <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 </head>
 
 <body>

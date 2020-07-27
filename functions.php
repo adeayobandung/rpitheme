@@ -27,12 +27,16 @@ function rpitheme_menus() {
 
 add_action( 'init', 'rpitheme_menus' );
 
+function my_excerpt_length($length){
+	return 10;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
 // for menu ----------
 function add_link_atts($atts) {
 	$atts['class'] = "nav-link";
 	return $atts;
 }
-
 add_filter( 'nav_menu_link_attributes', 'add_link_atts');
 
 function add_classes_on_li($classes, $item, $args) {
@@ -41,5 +45,4 @@ function add_classes_on_li($classes, $item, $args) {
     }
     return $classes;
 }
-
 add_filter('nav_menu_css_class','add_classes_on_li',1,3);
