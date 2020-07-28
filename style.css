@@ -99,12 +99,19 @@ ol.carousel-indicators li.active {
     min-height: 275px;
 }
 
+.content-slice-page {
+    background-color: #20434E;
+    overflow: hidden;
+    min-height: 150px;
+}
+
 .content-slice {
     background-color: #E8E8E8;
     height: 275px;
     overflow: hidden;
 }
 .content-slice-president h2,
+.content-slice-page h2,
 .content-slice h2 {
     color: #20434E;
     font-size: 24px;

@@ -6,7 +6,7 @@
   <main>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       
-    <div class="container mt-5 pt-4 mb-4" style="">
+    <div class="container mt-5 pt-4 mb-4">
       <article class="article-full">
       	<h2 class="mb-3"><?php the_title(); ?></h2>
         <p class="m-0 p-0" style="font-size:1em;color:#ACACAC;">Oleh: <?php the_author(); ?> | Tanggal : <?php the_date(); ?></p>
