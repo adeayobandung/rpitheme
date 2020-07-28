@@ -133,7 +133,7 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title mb-0 pb-0" style="font-size: 1.1em;" title="<?php the_title_attribute(); 
 ?>"><?php the_title(); ?></h5>
-            <p class="m-0 p-0" style="font-size:0.7em;color:#ACACAC;"><?php the_author(); ?> | <?php the_date(); ?></p>
+            <p class="m-0 p-0" style="font-size:0.7em;color:#ACACAC;"><?php the_author(); ?> | <?php echo get_the_date(); ?></p>
             <hr class="mb-2 mt-0 p-0">
             <div class="excerpt">
               <?php the_excerpt(); ?>
