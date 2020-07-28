@@ -18,6 +18,7 @@
         <?php endif; ?>
       </article>
       <hr>
+      
       <?php
 
       /**
