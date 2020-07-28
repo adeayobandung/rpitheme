@@ -129,7 +129,7 @@
             <div style="max-height:150px;overflow: hidden;">
               <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/imagenotfound.png" class="card-img-top" alt="..."> -->
 
-              <?php echo the_post_thumbnail(); ?>
+              <?php echo the_post_thumbnail(array(290)); ?>
             </div>
           
           <div class="card-body d-flex flex-column">
