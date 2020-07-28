@@ -32,33 +32,6 @@ function my_excerpt_length($length){
 }
 add_filter('excerpt_length', 'my_excerpt_length');
 
-function set_attachment_as_featured_image($content) {
-    global $post;
-    if (has_post_thumbnail()) {
-        // display the featured image
-        $content = the_post_thumbnail() . $content;
-    } else {
-        // get & set the featured image
-        $attachments = get_children(array(
-            'post_parent' => $post->ID,
-            'post_status' => 'inherit',
-            'post_type' => 'attachment',
-            'post_mime_type' => 'image',
-            'order' => 'ASC',
-            'orderby' => 'menu_order'
-        ));
-        if ($attachments) {
-            foreach ($attachments as $attachment) {
-                set_post_thumbnail($post->ID, $attachment->ID);
-                break;
-            }
-            // display the featured image
-            $content = the_post_thumbnail() . $content;
-        }
-    }
-    return $content;
-}
-add_filter('the_content', 'set_attachment_as_featured_image');
 
 // for menu ----------
 function add_link_atts($atts) {
