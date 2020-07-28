@@ -12,6 +12,9 @@
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  */
+
+add_theme_support( 'post-thumbnails' );
+
 function rpitheme_menus() {
 
 	$locations = array(
