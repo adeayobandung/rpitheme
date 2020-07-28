@@ -126,7 +126,7 @@
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="col-lg-3 m-0 p-2">
           <div class="card shadow border-0 rounded-lg" style="min-height: 390px;">
-            <div style="max-height:190px;overflow: hidden;">
+            <div style="max-height:150px;overflow: hidden;">
               <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/imagenotfound.png" class="card-img-top" alt="..."> -->
 
               <?php echo the_post_thumbnail(); ?>
