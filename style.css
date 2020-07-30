@@ -33,6 +33,10 @@ article {
     font-family: 'Javanese Text', 'Noto Serif', 'Roboto', sans-serif;
 }
 
+.btn {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 /* navbar */
 .nav-link {
     font-family: 'Roboto Condensed', sans-serif;
