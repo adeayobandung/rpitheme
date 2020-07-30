@@ -22,13 +22,15 @@ CSS Created : by Ade Indra Saputra
 */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Javanese Text', serif;
+    
     margin: 65px 0 0 0;
     padding: 0;
 }
 
 article {
-    font-family: 'Noto Serif', 'Roboto', sans-serif;
+    font-family: 'Javanese Text', 'Noto Serif', 'Roboto', sans-serif;
 }
 
 /* navbar */

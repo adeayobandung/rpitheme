@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Javanese Text';
+    src: url('JavaneseText.woff2') format('woff2'),
+        url('JavaneseText.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
