@@ -1,5 +1,9 @@
 <?php
 	get_header();
+
+  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+  $args = array( 'post_type' => 'slider','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
+  $blog_query = new WP_Query( $args );
 ?>
   
 
@@ -24,9 +28,6 @@
             </ol>
             <div class="carousel-inner">
               <?php
-                  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                $args = array( 'post_type' => 'slider','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
-                $blog_query = new WP_Query( $args );
                 $i = 1;
               ?>
               <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
