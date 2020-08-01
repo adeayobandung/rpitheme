@@ -18,7 +18,7 @@
             <div class="carousel-inner">
               <?php
                   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                $args = array( 'post_type' => 'service','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
+                $args = array( 'post_type' => 'slider','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
                 $blog_query = new WP_Query( $args );
               ?>
               <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
@@ -37,6 +37,7 @@
                   <img src="<?php echo get_template_directory_uri(); ?>/images/slide-3.jpeg" class="d-block w-100" alt="...">
                 </div>
               </div> -->
+              <?php endwhile; ?>
               <?php endif; ?>
             </div>
             <a class="carousel-control-prev shadow" href="#carouselExampleIndicators" role="button" data-slide="prev">
