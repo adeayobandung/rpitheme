@@ -16,12 +16,18 @@
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
+              <?php
+                  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+                $args = array( 'post_type' => 'service','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
+                $blog_query = new WP_Query( $args );
+              ?>
+              <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
               <div class="carousel-item active">
                 <div class="carousel-item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/slide-1.jpeg" class="d-block w-100" alt="...">
+                  <img src="<?php echo $image[0]; ?>" class="d-block w-100" alt="<?php the_title(); ?>">
                 </div>
               </div>
-              <div class="carousel-item">
+              <!-- <div class="carousel-item">
                 <div class="carousel-item-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/slide-2.jpeg" class="d-block w-100" alt="...">
                 </div>
@@ -30,7 +36,8 @@
                 <div class="carousel-item-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/slide-3.jpeg" class="d-block w-100" alt="...">
                 </div>
-              </div>
+              </div> -->
+              <?php endif; ?>
             </div>
             <a class="carousel-control-prev shadow" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
