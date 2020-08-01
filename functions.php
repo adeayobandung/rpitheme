@@ -71,7 +71,7 @@ function slide_post_register(){
     $args = array(
         'labels'        => $labels,
         'description'   => 'Slider',
-        'public'        => true,
+        'public'        => false,
 		'menu_icon'     => 'dashicons-admin-page',
         'menu_position' => 20,
         'supports'      => array('title','editor', 'thumbnail'),
