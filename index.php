@@ -32,7 +32,7 @@
               <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
                 <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-thumb'); ?>
 
-                <?php if($no == 1) : ?>
+                <?php if($i == 1) : ?>
                   <div class="carousel-item active">
                     <div class="carousel-item-img">
                       <img src="<?php echo $image[0]; ?>" class="d-block w-100" alt="<?php the_title(); ?>">
