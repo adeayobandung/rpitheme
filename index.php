@@ -14,9 +14,9 @@
               <?php $no = 1; ?>
               <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
                 <?php if($no == 1) : ?>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php $no; ?>" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $no; ?>" class="active"></li>
                 <?php else : ?>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php $no; ?>"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $no; ?>"></li>
                 <?php endif; ?>
                 <?php $no++; ?>
               <?php endwhile; ?>
