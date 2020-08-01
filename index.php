@@ -11,33 +11,42 @@
 
           <div id="carouselExampleIndicators" class="carousel slide mt-4 shadow-sm" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <?php $no = 1; ?>
+              <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
+                <?php if($no == 1) : ?>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php $no; ?>" class="active"></li>
+                <?php else : ?>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php $no; ?>"></li>
+                <?php endif; ?>
+                <?php $no++; ?>
+              <?php endwhile; ?>
+              <?php endif; ?>
             </ol>
             <div class="carousel-inner">
               <?php
                   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                 $args = array( 'post_type' => 'slider','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
                 $blog_query = new WP_Query( $args );
+                $i = 1;
               ?>
               <?php if ( $blog_query->have_posts() ) : while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
-              <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-thumb'); ?>
-              <div class="carousel-item active">
-                <div class="carousel-item-img">
-                  <img src="<?php echo $image[0]; ?>" class="d-block w-100" alt="<?php the_title(); ?>">
-                </div>
-              </div>
-              <!-- <div class="carousel-item">
-                <div class="carousel-item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/slide-2.jpeg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/slide-3.jpeg" class="d-block w-100" alt="...">
-                </div>
-              </div> -->
+                <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-thumb'); ?>
+
+                <?php if($no == 1) : ?>
+                  <div class="carousel-item active">
+                    <div class="carousel-item-img">
+                      <img src="<?php echo $image[0]; ?>" class="d-block w-100" alt="<?php the_title(); ?>">
+                    </div>
+                  </div>
+                <?php else : ?>
+                  <div class="carousel-item">
+                    <div class="carousel-item-img">
+                      <img src="<?php echo $image[0]; ?>" class="d-block w-100" alt="<?php the_title(); ?>">
+                    </div>
+                  </div>
+                <?php endif; ?>
+              
+              <?php $i++; ?>
               <?php endwhile; ?>
               <?php endif; ?>
             </div>
