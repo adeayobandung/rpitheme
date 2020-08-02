@@ -109,20 +109,20 @@ function slide_post_video(){
     $args = array(
         'labels'        => $labels,
         'description'   => 'Videos',
-        'public'        => false,
+        'public'        => true,
 		'menu_icon'     => 'dashicons-video-alt3',
         'menu_position' => 20,
         'supports'      => array('title','editor', 'thumbnail'),
 		'exclude_from_search' => true,
-        'has_archive'   => false,
+        'has_archive'   => true,
         'show_ui'       => true,
 		'rewrite'       => array(
-					'slug'		 	=> 'slider',
+					'slug'		 	=> 'video',
 					'with_front'	=> true
 				),
 		
     );
-    register_post_type( 'slider', $args );
+    register_post_type( 'videos', $args );
 	flush_rewrite_rules();
 }
 add_action( 'init', 'slide_post_video' );
