@@ -72,7 +72,7 @@ function slide_post_register(){
         'labels'        => $labels,
         'description'   => 'Slider',
         'public'        => false,
-		'menu_icon'     => 'dashicons-admin-page',
+		'menu_icon'     => 'dashicons-welcome-view-site',
         'menu_position' => 20,
         'supports'      => array('title','editor', 'thumbnail'),
 		'exclude_from_search' => true,
@@ -88,3 +88,41 @@ function slide_post_register(){
 	flush_rewrite_rules();
 }
 add_action( 'init', 'slide_post_register' );
+
+// new menu post
+function slide_post_video(){
+    $labels = array(
+        'name'               => __( 'Videos' ),
+        'singular_name'      => __( 'Videos' ),
+        'add_new'            => __( 'Add New' ),
+        'add_new_item'       => __( 'Add New' ),
+        'edit_item'          => __( 'Edit' ),
+        'new_item'           => __( 'New Video' ),
+        'all_items'          => __( 'All Videos' ),
+        'view_item'          => __( 'View Video' ),
+        'search_items'       => __( 'Search Videos' ),
+        'not_found'          => __( 'No Video found' ),
+        'not_found_in_trash' => __( 'No Video found in the Trash' ), 
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Videos'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Videos',
+        'public'        => false,
+		'menu_icon'     => 'dashicons-video-alt3',
+        'menu_position' => 20,
+        'supports'      => array('title','editor', 'thumbnail'),
+		'exclude_from_search' => true,
+        'has_archive'   => false,
+        'show_ui'       => true,
+		'rewrite'       => array(
+					'slug'		 	=> 'slider',
+					'with_front'	=> true
+				),
+		
+    );
+    register_post_type( 'slider', $args );
+	flush_rewrite_rules();
+}
+add_action( 'init', 'slide_post_video' );
