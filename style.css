@@ -178,11 +178,11 @@ ol.carousel-indicators li.active {
   overflow: hidden;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) { 
+/*@media (min-width: 768px) and (max-width: 991.98px) { 
   .post-img .wp-post-image {
     width: 100%;
   }
-}
+}*/
 @media (min-width: 992px) {
   .post-img {
     max-height:150px;
