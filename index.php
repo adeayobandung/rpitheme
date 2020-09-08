@@ -6,7 +6,7 @@
   $blog_query = new WP_Query( $args );
 
   // post category
-  $args_cat = array( 'category_name' => 'cerpen','posts_per_page' => 5);
+  $args_cat = array( 'category_name' => 'cerpen','posts_per_page' => 9);
   $blog_query_cat = new WP_Query( $args_cat );
 
   // echo print_r($blog_query_cat);die;
