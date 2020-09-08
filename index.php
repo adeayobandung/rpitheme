@@ -94,12 +94,12 @@
           <p class="animated bounceInDown">Menciptakan Manusia Indonesia yang produktif dalam berbagai bidang berbasis pada masyarakat berjejaring.</p>
         </div>
         <div class="col-lg-4">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/Visi-Icon.gif" class="animated bounceInDown" width="250" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/3081783.jpg" class="animated bounceInDown img-responsive" width="100%" alt="">
         </div>
       </div>
       <div class="row justify-content-md-center">
         <div class="col-lg-4">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/Misi-Icon.gif" class="animated bounceInDown" width="250" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/3372240.jpg" class="animated bounceInDown img-responsive" width="100%" alt="">
         </div>
         <div class="col-lg-6">
           <h2 class="pt-3 title-service text-success animated bounceInRight">Misi</h2>
