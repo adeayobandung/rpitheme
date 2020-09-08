@@ -25,7 +25,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/plugin/animation/css/animations.css" type="text/css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/stylesheet.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
@@ -37,50 +37,28 @@
 
 <body>
 
-<nav class="navbar shadow fixed-top navbar-expand-lg navbar-light bg-white">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar-content">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo site_url(); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/logo-rpi.png" alt="rpi.or.id" width="40">
-      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-
-        
-
-        <ul class="navbar-nav">
-          
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="/">HOME</a>
-          </li> -->
-          <?php
-          if ( has_nav_menu( 'primary' ) ) {
-
-            wp_nav_menu(
-              array(
-                'container'  => 'false',
-                'menu_class' => 'nav-item',
-                'items_wrap' => '%3$s',
-                'theme_location' => 'primary',
-              )
-            );
-
-          }
+        <?php
+        wp_nav_menu( array(
+          'theme_location' => 'menu-1',
+          'menu_id'        => 'primary-menu',
+          'container'      => false,
+          'depth'          => 2,
+          'menu_class'     => 'navbar-nav',
+          'walker'         => new Bootstrap_NavWalker(),
+          'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+        ) );
         ?>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#teams">PROFIL RPI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#product">OPINI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">BERITA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">CONTACT US</a>
-          </li> -->
-        </ul>
         <ul class="navbar-nav ml-auto">
           <?php if( is_user_logged_in() ) { ?>
             <li class="nav-item">
@@ -97,8 +75,7 @@
 
           <?php } ?>
         </ul>
-
       </div>
     </div>
-  </nav>
-    
+  </div>
+</nav>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twenty Seventeen functions and definitions
  *
@@ -12,6 +13,11 @@
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  */
+require get_template_directory() . '/bootstrap-navwalker/bootstrap-navwalker.php';
+
+register_nav_menus(array(
+    'menu-1' => esc_html__('Primary', 'theme-textdomain' ),
+));
 
 add_theme_support( 'post-thumbnails' );
 
