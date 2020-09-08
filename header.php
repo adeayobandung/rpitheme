@@ -28,7 +28,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/plugin/animation/css/animations.css" type="text/css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style/post_slider.css">
+  
 
   <?php wp_head(); ?>
 

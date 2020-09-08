@@ -4,6 +4,12 @@
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
   $args = array( 'post_type' => 'slider','posts_per_page' => get_option('posts_per_page'),'paged' => $paged );
   $blog_query = new WP_Query( $args );
+
+  // post category
+  $args_cat = array( 'category_name' => 'cerpen','posts_per_page' => 5);
+  $blog_query_cat = new WP_Query( $args_cat );
+
+  // echo print_r($blog_query_cat);die;
 ?>
   
 
@@ -87,6 +93,45 @@
       </div>
     </div>
 
+    <div class="content-slice-president" id="order">
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-12">
+              <div id="news-slider8" class="owl-carousel">
+                <?php if ( $blog_query_cat->have_posts() ) : while ( $blog_query_cat->have_posts() ) : $blog_query_cat->the_post(); ?>
+                  <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'single-thumb'); ?>
+                  <div class="post-slide8">
+                      <div class="post-img">
+                          <img src="<?php echo $image[0]; ?>" alt="RPI">
+                          <div class="over-layer">
+                              <ul class="post-link">
+                                  <li><a href="<?php the_permalink(); ?>" class="fa fa-link"></a></li>
+                              </ul>
+                          </div>
+                          <div class="post-date">
+                              <span class="date"><?php echo get_the_date('j'); ?></span>
+                              <span class="month"><?php echo get_the_date('F'); ?></span>
+                          </div>
+                      </div>
+                      <div class="post-content">
+                          <h3 class="post-title">
+                              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                          </h3>
+                          <p class="post-description">
+                              <?php the_excerpt(); ?>
+                          </p>
+                          <a href="<?php the_permalink(); ?>" class="read-more">read more</a>
+                      </div>
+                  </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
+   
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container animatedParent animateOnce" style="overflow:hidden;min-height:360px;">
       <div class="row justify-content-md-center">
         <div class="col-lg-6">
@@ -159,7 +204,7 @@
             <div class="excerpt">
               <?php the_excerpt(); ?>
             </div>
-            <a href="<?php the_permalink(); ?>" class="btn btn-info btn-sm mt-auto">SELENGKAPNYA</a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-info btn-sm mt-auto">SELENGKAPNYA <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         </div>
@@ -169,6 +214,10 @@
 	    
 
 	    </div>
+      <div class="text-center">
+        <a href="" class="btn btn-primary btn-lg">BERITA LAINNYA <i class="fas fa-arrow-right"></i></a>  
+      </div>
+      
 
     </div>
 
