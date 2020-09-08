@@ -22,7 +22,7 @@
         <?php endif; ?>
       </article>
       
-      <div style="clear:both;"></div>
+      
     </div>
     
     

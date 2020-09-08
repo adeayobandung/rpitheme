@@ -32,6 +32,7 @@ body {
 article {
     font-family: 'Roboto', sans-serif;
     /*font-family: 'Javanese Text', 'Noto Serif', 'Roboto', sans-serif;*/
+    overflow: hidden;
 }
 
 .btn {
